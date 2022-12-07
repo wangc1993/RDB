@@ -641,7 +641,7 @@ func (d *decode) checkHeader() error {
 	}
 
 	version, _ := strconv.ParseInt(string(header[5:]), 10, 64)
-	if version < 1 || version > 8 {
+	if version < 1 || version > 9 {
 		return fmt.Errorf("Can't handle RDB format version %d", version)
 	}
 
